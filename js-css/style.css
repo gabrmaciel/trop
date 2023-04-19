@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Sans;
+    float: left;
+}
+
+html, body{
+    height: 100%;
+    float: none;
+}
+
+body{
+    background: rgb(28, 30, 56)
+}
+
+.body-inner-div{
+    float: none;
+    max-width: 1280px;
+    margin: auto;
+    text-align: left;
+    padding: 0px 20px;
+}
+
+#tropical-latino-circular{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#tropical-latino-circular .body-inner-div{
+    position: relative;
+    height: 100%;
+}
+
+#tropical-latino-circular .box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#tropical-latino-circular .logo{
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    margin-top: 4rem
+}
+
+#tropical-latino-circular .trop{
+    width: 50%;
+    margin-top: 5rem
+}
+
+#tropical-latino-circular h1{
+    line-height: 0.95;
+    font-size: 3.5rem;
+    color: #FFF;
+}
+
+#tropical-latino-circular .trop-texto{
+    width: 100%;
+    margin-top: 1.33rem;
+    color: #FFF
+}
+
+#tropical-latino-circular .trop-texto span{
+    width: 80%;
+    margin-bottom: 0.66rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+#tropical-latino-circular h1 i{
+    font-family: IBM Plex Serif;
+    font-weight: 200;
+}
+
+#tropical-latino-circular .circulo{
+    width: 50%;
+    padding: 0;
+    padding-top: 4rem;
+}
+
+#tropical-latino-circular .trop-email{
+    width: 100%;
+}
+
+#tropical-latino-circular .trop-email-titulo{
+    width: 100%;
+    margin-top: 3rem;
+    font-weight: 500;
+    color: #FFF;
+    opacity: 0.9;
+}
+
+#tropical-latino-circular .trop-email-titulo-mobile{
+    display: none;
+}
+
+#tropical-latino-circular .trop-email button{
+    margin-top: 1rem;
+    font-weight: 500;
+    background: #ff6958;
+    border-radius: 200px;
+    color: #ffffffca;
+    padding: 0.8rem 4rem;
+    border: none;
+    cursor: pointer
+}
+
+#tropical-latino-circular .trop-email button:hover{
+    background-color: rgb(255, 83, 64);
+}
+
+#tropical-latino-circular .estrela{
+    position: absolute;
+    top: -160px;
+    left: calc(50% - 120px);
+    transform: scale(0.8);
+}
+
+
+@media(max-width: 1240px){
+    #tropical-latino-circular .trop-texto span{
+        width: 100%;
+    }
+}
+
+@media(max-width: 1040px){
+    #tropical-latino-circular .trop{
+        width: 80%;
+    }
+}
+
+@media(max-width: 870px){
+    #tropical-latino-circular .trop{
+        width: 90%;
+    }
+
+    #tropical-latino-circular .circulo{
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+
+    #tropical-latino-circular{
+        overflow: hidden;
+    }
+
+    #tropical-latino-circular .box{
+        flex-direction: column-reverse;
+    }
+
+    #tropical-latino-circular .circulo{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding: 6rem;
+        padding-bottom: 1rem;
+    }
+
+    #tropical-latino-circular .trop{
+        width: 100%;
+        margin-top: 0;
+        padding-bottom: 2rem
+    }
+
+    #id-circulo{
+        height: 100%;
+    }
+
+    #tropical-latino-circular h1{
+        font-size: 2.5rem;
+    }
+
+    #tropical-latino-circular .estrela{
+        top: -86px;
+        left: calc(100% - 134px);
+        transform: scale(0.7);
+    }
+
+    #tropical-latino-circular .trop-email-titulo{
+        display: none;
+        margin-top: 2rem
+    }
+
+    #tropical-latino-circular .logo{
+        width: 7rem;
+        margin-top: 3rem;
+    }
+
+    #tropical-latino-circular .trop-email-titulo-mobile{
+        display: block;
+    }
+    
+}
+
+@media (max-height: 660px) and (min-width: 600px) {
+    #tropical-latino-circular .trop-texto span:nth-child(2){
+        display: none;
+    }
+        
+        
+    #tropical-latino-circular .trop{
+        margin-top: 8rem
+    }
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(28, 30, 56)">
+    <meta name="msapplication-navbutton-color" content="rgb(28, 30, 56)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="rgb(28, 30, 56)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Trop, Consumoteca, Tendências, Grupo Consumoteca, Pesquisa de tendências, Mapeamento de tendências, Consumoteca Tendências">
+    <meta property="og:title" content="TROP ✷ O futuro já circula entre nós"/>
+    <meta property="og:description" content="Núcleo de pesquisa de tendências do Grupo Consumoteca. Latino. Tropical. Circular."/>
+    <meta property="og:image" content="img/og-tag.png"/>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="js-css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    
+    <script src="js-css/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" type="text/javascript"></script>
+
+    <title>TROP ✷ O futuro já circula entre nós</title>
+</head>
+<body>
+   
+    <div id="tropical-latino-circular">
+        <div class="body-inner-div">
+            <img src="img/logo.svg" class="logo" alt="" srcset="">
+            <div class="box" class="">
+                <div class="trop">
+                    <h1>TROPICAL. LATINO. <i>CIRCULAR.</i></h1>
+                    <div class="trop-texto">
+                        <span>A Trop é o núcleo de tendências do Grupo Consumoteca. Aplicamos nossa perspectiva tropical e latina para traduzir movimentos globais.</span>
+                        <span>A partir do cruzamento de metodologia quanti e quali, desenvolvemos uma ferramenta capaz transformar o estudo de tendência em plano de ação, buscando insights acionáveis.</span>
+                    </div>
+                    <div class="trop-email">
+                        <span class="trop-email-titulo">CLIQUE AQUI E BAIXE O E-BOOK COM A METODOLOGIA COMPLETA:</span>
+                        <span class="trop-email-titulo trop-email-titulo-mobile">BAIXE O E-BOOK COM A METODOLOGIA TROP:</span>
+                        <a href="manifesto-comunista.pdf" download>
+                            <button>BAIXAR E-BOOK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="circulo">
+                    <div id="id-circulo"></div>
+                </div>
+            </div>
+        </div>
+        <img src="img/estrela-topo.svg" class="estrela" alt="">
+    </div>
+    
+
+    <script>
+        var animation = bodymovin.loadAnimation({
+
+            container: document.getElementById('id-circulo'),
+            path: 'img/triangulo-mandala.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            name: "Demo Animation",
+
+        });  
+        
+        $(document).on('keypress',function(e) {
+            if(e.which == 13) {
+                validaEnviar();
+            }
+
+        });
+        
+        function validaEnviar(){
+            
+            var email = $("#email-envia").val();
+
+            $.get("bdcr.php?email="+email, function(result){
+                if(result == "false"){
+                    $("#email-envia").val("");
+                    $("#email-envia").attr("placeholder", "e-mail inválido");
+                    $("#email-envia").addClass("box-input-placeholder-colorido");
+                }else{
+                    $.get("axco.php?email="+email, function(result){
+                        $("#email-envia").val("e-mail enviado com sucesso!");
+                        $("#email-envia").prop("disabled", true);
+                        $("#button-envia").prop("disabled", true);
+                        $("#button-envia, #email-envia").css("cursor", "not-allowed");
+                    });
+                }
+            });
+        }
+
+        function retornoCor(){
+            $("#email-envia").attr("placeholder", "seu e-mail");
+            $("#email-envia").removeClass("box-input-placeholder-colorido");
+        }
+    </script>
+    
+</body>
+</html>

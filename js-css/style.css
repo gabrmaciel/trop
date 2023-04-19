@@ -158,7 +158,7 @@ body{
         display: flex;
         justify-content: end;
         width: 100%;
-        padding: 6rem;
+        padding: 5rem;
         padding-bottom: 1rem;
     }
 
@@ -188,8 +188,8 @@ body{
     }
 
     #tropical-latino-circular .logo{
-        width: 7rem;
-        margin-top: 3rem;
+        width: 6rem;
+        margin-top: 2rem;
     }
 
     #tropical-latino-circular .trop-email-titulo-mobile{
